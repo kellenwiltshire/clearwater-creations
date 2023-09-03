@@ -1,15 +1,17 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-	future: {
-		removeDeprecatedGapUtilities: true,
-	},
-	mode: 'jit',
-	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'], // remove unused styles in production
-	darkMode: false, // or 'media' or 'class'
+	mode: "jit",
+	content: [
+		"./app/**/*.{js,ts,jsx,tsx,mdx}",
+		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./components/**/*.{js,ts,jsx,tsx,mdx}",
+	],
 	theme: {
 		extend: {},
 	},
-	variants: {
-		extend: {},
-	},
-	plugins: [],
-};
+	darkMode: false,
+	plugins: [
+		require("@tailwindcss/aspect-ratio"),
+		require("@tailwindcss/forms")
+	]
+}
