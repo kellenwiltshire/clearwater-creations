@@ -6,10 +6,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Link from 'next/link'
-
-function classNames(...classes) {
-	return classes.filter(Boolean).join(' ')
-}
+import { classNames } from '../../utils/helpers'
 
 const supportLinks = [
 	{
